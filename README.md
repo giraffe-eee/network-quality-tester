@@ -61,13 +61,3 @@ UDP 占 70 分，TCP 占 30 分。所有曲线采用连续插值，不会在某�
 成品位于 `dist/网络质量检测器.exe`。首次构建会下载 PyInstaller。
 
 客户端目录中的 `tcl-runtime/` 是 exe 自带图形界面所需的 Tcl/Tk 运行时，发布时不要删除。
-
-## 发布到 GitHub
-
-本机已登录 GitHub CLI 时，构建后执行：
-
-```powershell
-./publish.ps1 -Version 1.1.0
-```
-
-脚本会向 `giraffe-eee/network-quality-tester` 创建或更新对应的 Release，并上传 exe 与 SHA-256 校验文件。可用 `-Repository owner/repo` 覆盖目标仓库。
